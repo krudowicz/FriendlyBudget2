@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FriendlyBudget2.Core.Abstracts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FriendlyBudget2.DTO
 {
-    class Expenditure
+    class Expenditure : DataObject
     {
         public long Id { get; set; }
         public string Name { get; set; }

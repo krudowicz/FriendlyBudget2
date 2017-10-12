@@ -82,11 +82,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Core\Abstracts\DataObject.cs" />
+    <Compile Include="Core\Interfaces\IDataProvider.cs" />
+    <Compile Include="Core\Interfaces\IRepository.cs" />
+    <Compile Include="Database\Adapters\EntityFrameworkAdapter.cs" />
+    <Compile Include="Database\EntityFramework\MainContext.cs" />
     <Compile Include="DTO\Expenditure.cs" />
     <Compile Include="DTO\ExpenditureCategory.cs" />
     <Compile Include="DTO\FamilyMember.cs" />
     <Compile Include="DTO\Income.cs" />
     <Compile Include="DTO\IncomeCategory.cs" />
+    <Compile Include="Repositories\ExpenditureRepository.cs" />
+    <Compile Include="Repositories\FamilyMemberRepository.cs" />
+    <Compile Include="Repositories\IncomeRepository.cs" />
     <Compile Include="Services\Calculator.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -123,8 +131,6 @@
   <ItemGroup>
     <Folder Include="Commands\" />
     <Folder Include="Configuration\" />
-    <Folder Include="Core\" />
-    <Folder Include="Repositories\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

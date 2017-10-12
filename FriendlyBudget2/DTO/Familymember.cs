@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FriendlyBudget2.Core.Abstracts;
 
 namespace FriendlyBudget2.DTO
 {
-    class FamilyMember
+    class FamilyMember : DataObject
     {
-        public long Id { get; set; }
-        public string Name { get; set; }
         public ICollection<Income> Incomes { get; set; }
         public ICollection<Expenditure> Expenditures { get; set; }
         public double Budget { get; set; }

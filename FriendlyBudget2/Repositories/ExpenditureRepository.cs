@@ -5,22 +5,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FriendlyBudget2.Database.DataProviders;
 
 namespace FriendlyBudget2.Repositories
 {
     class ExpenditureRepository : IRepository<Expenditure>
     {
-        private IDataProvider<Expenditure> _DataProvider { get; set; }
+        private IDataProvider<Expenditure> DataProvider;
 
-        public ExpenditureRepository()
+        public ExpenditureRepository(IDataProvider<Expenditure> dataProvider)
         {
-            _DataProvider = new DefaultDataProvider();
+            DataProvider = dataProvider;
         }
 
-        public ExpenditureRepository(IDataProvider<Expenditure> DataProvider)
+        public void Add(Expenditure entity)
         {
-            _DataProvider = DataProvider;
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Expenditure> GetAll()
+        {
+            throw new NotImplementedException();
         }
 
         public Expenditure GetById(long id)
@@ -28,22 +32,27 @@ namespace FriendlyBudget2.Repositories
             throw new NotImplementedException();
         }
 
-        public Expenditure GetByQuery(string query)
+        public IEnumerable<Expenditure> GetMany()
         {
             throw new NotImplementedException();
         }
 
-        public void Add(Expenditure expenditure)
+        public Expenditure GetOne()
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Expenditure expenditure)
+        public void Remove(Expenditure entity)
         {
             throw new NotImplementedException();
         }
 
-        public void Remove(Expenditure expenditure)
+        public void Save()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Expenditure entity)
         {
             throw new NotImplementedException();
         }

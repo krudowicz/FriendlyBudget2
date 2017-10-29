@@ -9,11 +9,15 @@ namespace FriendlyBudget2.Core.Interfaces
 {
     interface IRepository<T>
     {
+
         T GetById(long id);
-        T GetByQuery(string query);
+        T GetOne();
+        IEnumerable<T> GetMany();
+        IEnumerable<T> GetAll();
         void Add(T item);
         void Update(T item);
         void Remove(T item);
+        void Save();
 
     }
 }

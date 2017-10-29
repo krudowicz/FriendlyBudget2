@@ -8,8 +8,10 @@ namespace FriendlyBudget2.Core.Interfaces
 {
     interface IDataProvider<T>
     {
-        void Add(T item);
-        void Update(T item, T itemToUpdate);
+        T GetById(long id);
+        IEnumerable<T> GetByQuery(string query);
+        void Add(T entity);
+        void Update(T item);
         void Remove(T item);
     }
 }

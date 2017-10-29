@@ -28,11 +28,6 @@ namespace FriendlyBudget2.Services
             }
         }
 
-        public Calculator()
-        {
-
-        }
-
         public Calculator(FamilyMember familyMember)
         {
             FamilyMember = familyMember;
@@ -61,7 +56,7 @@ namespace FriendlyBudget2.Services
                 totalIncomeSecondary += income.AmountSecondary;
             }
 
-            totalIncome = totalIncomeMain + ((totalIncomeSecondary - (totalIncomeSecondary / 100)) % 100);
+            totalIncome = totalIncomeMain + (totalIncomeSecondary / 100) + (totalIncomeSecondary % 100);
 
             return totalIncome;
         }
@@ -79,7 +74,7 @@ namespace FriendlyBudget2.Services
                 totalExpenditureSecondary += income.AmountSecondary;
             }
 
-            totalExpenditure = totalExpenditureMain + ((totalExpenditureSecondary - (totalExpenditureSecondary / 100)) % 100);
+            totalExpenditure = totalExpenditureMain + (totalExpenditureSecondary / 100) + (totalExpenditureSecondary % 100);
 
             return totalExpenditure;
         }

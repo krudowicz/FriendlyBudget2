@@ -85,7 +85,7 @@
     <Compile Include="Core\Abstracts\DataObject.cs" />
     <Compile Include="Core\Interfaces\IDataProvider.cs" />
     <Compile Include="Core\Interfaces\IRepository.cs" />
-    <Compile Include="Database\Adapters\EntityFrameworkAdapter.cs" />
+    <Compile Include="Database\EntityFramework\EntityFrameworkAdapter.cs" />
     <Compile Include="Database\EntityFramework\MainContext.cs" />
     <Compile Include="DTO\Expenditure.cs" />
     <Compile Include="DTO\ExpenditureCategory.cs" />

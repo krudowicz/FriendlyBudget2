@@ -1,24 +1,30 @@
-﻿using System;
+﻿using FriendlyBudget2.Core.Interfaces;
+using FriendlyBudget2.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FriendlyBudget2.DTO;
-using FriendlyBudget2.Core.Interfaces;
 
 namespace FriendlyBudget2.Repositories
 {
     class FamilyMemberRepository : IRepository<FamilyMember>
     {
-        private IDataProvider<FamilyMember> _DataProvider { get; set; }
+        private IDataProvider<FamilyMember> DataProvider;
 
-        public FamilyMemberRepository()
+        public FamilyMemberRepository(IDataProvider<FamilyMember> dataProvider)
         {
+            DataProvider = dataProvider;
         }
 
-        public FamilyMemberRepository(IDataProvider<FamilyMember> DataProvider)
+        public void Add(FamilyMember entity)
         {
-            _DataProvider = DataProvider;
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<FamilyMember> GetAll()
+        {
+            throw new NotImplementedException();
         }
 
         public FamilyMember GetById(long id)
@@ -26,22 +32,27 @@ namespace FriendlyBudget2.Repositories
             throw new NotImplementedException();
         }
 
-        public FamilyMember GetByQuery(string query)
+        public IEnumerable<FamilyMember> GetMany()
         {
             throw new NotImplementedException();
         }
 
-        public void Add(FamilyMember familyMember)
+        public FamilyMember GetOne()
         {
             throw new NotImplementedException();
         }
 
-        public void Update(FamilyMember familyMember)
+        public void Remove(FamilyMember entity)
         {
             throw new NotImplementedException();
         }
 
-        public void Remove(FamilyMember familyMember)
+        public void Save()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(FamilyMember entity)
         {
             throw new NotImplementedException();
         }

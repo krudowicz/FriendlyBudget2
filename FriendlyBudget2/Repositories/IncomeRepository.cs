@@ -10,16 +10,21 @@ namespace FriendlyBudget2.Repositories
 {
     class IncomeRepository : IRepository<Income>
     {
-        private IDataProvider<Income> _DataProvider { get; set; }
+        private IDataProvider<Income> DataProvider;
 
-        public IncomeRepository()
+        public IncomeRepository(IDataProvider<Income> dataProvider)
         {
-
+            DataProvider = dataProvider;
         }
 
-        public IncomeRepository(IDataProvider<Income> DataProvider)
+        public void Add(Income entity)
         {
-            _DataProvider = DataProvider;
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Income> GetAll()
+        {
+            throw new NotImplementedException();
         }
 
         public Income GetById(long id)
@@ -27,22 +32,27 @@ namespace FriendlyBudget2.Repositories
             throw new NotImplementedException();
         }
 
-        public Income GetByQuery(string query)
+        public IEnumerable<Income> GetMany()
         {
             throw new NotImplementedException();
         }
 
-        public void Add(Income income)
+        public Income GetOne()
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Income income)
+        public void Remove(Income entity)
         {
             throw new NotImplementedException();
         }
 
-        public void Remove (Income income)
+        public void Save()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Income entity)
         {
             throw new NotImplementedException();
         }

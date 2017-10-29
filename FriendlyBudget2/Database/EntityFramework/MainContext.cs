@@ -1,10 +1,10 @@
-﻿using System;
+﻿using FriendlyBudget2.DTO;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Entity;
-using FriendlyBudget2.DTO;
 
 namespace FriendlyBudget2.Database.EntityFramework
 {

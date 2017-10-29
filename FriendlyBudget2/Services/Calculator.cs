@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using FriendlyBudget2.DTO;
 
+
+//TODO: Change TotalIncome() and TotalExpenditure() to return values separated, not as a double
 namespace FriendlyBudget2.Services
 {
     class Calculator
@@ -56,7 +58,7 @@ namespace FriendlyBudget2.Services
                 totalIncomeSecondary += income.AmountSecondary;
             }
 
-            totalIncome = totalIncomeMain + (totalIncomeSecondary / 100) + (totalIncomeSecondary % 100);
+            totalIncome = totalIncomeMain + (totalIncomeSecondary / 100) + ((totalIncomeSecondary % 100) / 100d);
 
             return totalIncome;
         }
@@ -74,7 +76,7 @@ namespace FriendlyBudget2.Services
                 totalExpenditureSecondary += income.AmountSecondary;
             }
 
-            totalExpenditure = totalExpenditureMain + (totalExpenditureSecondary / 100) + (totalExpenditureSecondary % 100);
+            totalExpenditure = totalExpenditureMain + (totalExpenditureSecondary / 100) + ((totalExpenditureSecondary % 100) / 100d);
 
             return totalExpenditure;
         }
